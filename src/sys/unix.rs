@@ -388,6 +388,8 @@ type IovLen = usize;
     target_os = "espidf",
     target_os = "vita",
     target_os = "cygwin",
+    // Emscripten's libc is musl-derived: `msghdr.msg_iovlen` is an `int`.
+    target_os = "emscripten",
 ))]
 type IovLen = c_int;
 
